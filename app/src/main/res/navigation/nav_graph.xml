@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragA">
+
+    <fragment
+        android:id="@+id/fragA"
+        android:name="com.example.navtest.FragA"
+        android:label="frag_a"
+        tools:layout="@layout/frag_a" >
+        <action
+            android:id="@+id/launchFragB"
+            app:destination="@id/fragB"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/fragA"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragB"
+        android:name="com.example.navtest.FragB"
+        android:label="frag_b"
+        tools:layout="@layout/frag_b" />
+</navigation>
